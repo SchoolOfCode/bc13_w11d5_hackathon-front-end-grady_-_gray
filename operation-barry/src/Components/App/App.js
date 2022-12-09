@@ -1,24 +1,24 @@
-import LoginButton from "../Auth0/login";
-import LogoutButton from "../Auth0/logout";
-import Profile from "../Auth0/profile";
+// import LoginButton from "../Auth0/login";
+// import LogoutButton from "../Auth0/logout";
+// import Profile from "../Auth0/profile";
 import "./App.css";
-import CancelLaunchButton from "../CancelLaunchButton"
+// import CancelLaunchButton from "../CancelLaunchButton"
 import React from "react";
-import {useState} from "react";
+// import {useState} from "react";
 import { useGet } from "../../hooks/useGet/useGet";
 
 
 function App() {
-  const [userName, setUserName] = useState(false)
+  // const [userName, setUserName] = useState(false)
 
   const {response, error} = useGet("https://operationbarrybackend.onrender.com/items")
   console.log(response, error)
 
 
-  function handleClick(e){
-    e.window.open("https://media.tenor.com/v2n3rVxTeJQAAAAd/jeff-goldblum.gif")
-    console.log(e)
-  }
+  // //function handleClick(e){
+  //   e.window.open("https://media.tenor.com/v2n3rVxTeJQAAAAd/jeff-goldblum.gif")
+  //   console.log(e)
+  // }
 
   return (
     <div className="App">
