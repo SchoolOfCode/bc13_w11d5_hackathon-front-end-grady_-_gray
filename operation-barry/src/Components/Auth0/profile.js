@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useAuth0 } from "@auth0/auth0-react";
-import CancelLaunchButton from "../CancelLaunchButton";
+//import CancelLaunchButton from "../CancelLaunchButton";
 
 const Profile = ({ setUserName }) => {
   const { user, isAuthenticated, getAccessTokenSilently } = useAuth0();
@@ -34,13 +34,13 @@ const Profile = ({ setUserName }) => {
     getUserMetadata();
   }, [getAccessTokenSilently, user?.sub]);
 
-  function handleClick(e) {
-    window.open(
-      "https://media.tenor.com/v2n3rVxTeJQAAAAd/jeff-goldblum.gif",
-      "_blank",
-      "noopener,noreferrer"
-    );
-  }
+  // function handleClick(e) {
+  //   window.open(
+  //     "https://media.tenor.com/v2n3rVxTeJQAAAAd/jeff-goldblum.gif",
+  //     "_blank",
+  //     "noopener,noreferrer"
+  //   );
+  // }
 
   return (
     isAuthenticated && (
