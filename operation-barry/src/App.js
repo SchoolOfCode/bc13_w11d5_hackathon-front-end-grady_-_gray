@@ -15,7 +15,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          A brief history of the internet.
         </a>
       </header>
     </div>
