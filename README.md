@@ -11,3 +11,14 @@ Start simple and get your first iteration MVP of your app working as your first 
 - Deployed front and back ends that talk to each other
 - Use of the `useContext` hook somewhere in your app
 - Use of at least one custom hook somewhere in your app
+
+✅ Back end infrastructure - create a repo on personal gitHub account - setup database on railway - populate database with initial test values (manual) - cors middleware (allow permission when linking up later)
+
+✅ Front end create React App - create react app - component file structure - import into app main
+
+✅ Deployment (enabling auto-redeploy) - Front end - netlify - build command/ directory - enable auto-deploy - env variables (allowing connection to back end) - Back end - use Render - set up env variables in back end deployment - build command (npm i & npm start)
+
+✅ Back-end functionality - GET ALL route - Database - populate from useContext resource
+populate database with data from useContext spreadsheet
+
+✅ Front-end functionality - Components - fetch from back end (link to back-end repo) - useFetch (custom hook MVP goal)
