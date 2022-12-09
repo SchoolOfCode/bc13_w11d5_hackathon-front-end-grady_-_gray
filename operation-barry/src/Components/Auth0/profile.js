@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useAuth0 } from "@auth0/auth0-react";
-import CancelLaunchButton from "../CancelLaunchButton"
+import CancelLaunchButton from "../CancelLaunchButton";
 
-
-const Profile = ({setUserName}) => {
+const Profile = ({ setUserName }) => {
   const { user, isAuthenticated, getAccessTokenSilently } = useAuth0();
   const [userMetadata, setUserMetadata] = useState("");
   useEffect(() => {
@@ -30,19 +29,18 @@ const Profile = ({setUserName}) => {
       } catch (e) {
         console.log(e.message);
       }
-      
     };
 
     getUserMetadata();
   }, [getAccessTokenSilently, user?.sub]);
 
   function handleClick(e) {
-    window.open("https://media.tenor.com/v2n3rVxTeJQAAAAd/jeff-goldblum.gif", '_blank', 'noopener,noreferrer')
-
-  };
-
-
-
+    window.open(
+      "https://media.tenor.com/v2n3rVxTeJQAAAAd/jeff-goldblum.gif",
+      "_blank",
+      "noopener,noreferrer"
+    );
+  }
 
   return (
     isAuthenticated && (
@@ -51,9 +49,9 @@ const Profile = ({setUserName}) => {
         <h2>{user.name}</h2>
         <p>{user.email}</p>
         <h3>User Metadata</h3>
-        {userMetadata.nuclear_commander ? (
-          setUserName(true)
-        ) : false}
+
+        {/* {userMetadata?.nuclear_commande ? <p>Hello</p> : ""} */}
+        {userMetadata?.nuclear_commander ? setUserName(true) : false}
         {userMetadata ? (
           <pre className="meta">{JSON.stringify(userMetadata, null, 2)}</pre>
         ) : (
@@ -61,7 +59,6 @@ const Profile = ({setUserName}) => {
         )}
       </div>
     )
-  
   );
 };
 export default Profile;
